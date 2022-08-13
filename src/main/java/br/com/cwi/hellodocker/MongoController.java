@@ -19,9 +19,10 @@ import com.mongodb.client.result.InsertOneResult;
 @RestController()
 @RequestMapping("/mongo")
 public class MongoController {
+
     @Value("${spring.data.mongodb.uri}")
     private String mongoUri;
-
+    
     @GetMapping("/buscar") 
     public String mongo() {        
         var documento = buscarDocumentoNoMongo();
